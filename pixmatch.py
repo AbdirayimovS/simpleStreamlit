@@ -5,7 +5,7 @@ import random
 import base64
 import json
 from PIL import Image
-from streamlit_autorefresh import st_autorefresh
+# from streamlit_autorefresh import st_autorefresh
 
 st.set_page_config(page_title = "PixMatch", page_icon="🕹️", layout = "wide", initial_sidebar_state = "expanded")
 
@@ -237,8 +237,8 @@ def NewGame():
 
         st.markdown(sbe.replace('|fill_variable|', mystate.sidebar_emoji), True)
 
-        aftimer = st_autorefresh(interval=(mystate.GameDetails[1] * 1000), key="aftmr")
-        if aftimer > 0: mystate.myscore -= 1
+        # aftimer = st_autorefresh(interval=(mystate.GameDetails[1] * 1000), key="aftmr")
+        # if aftimer > 0: mystate.myscore -= 1
 
         st.info(f"{ScoreEmoji()} Score: {mystate.myscore} | Pending: {(total_cells_per_row_or_col ** 2)-len(mystate.expired_cells)}")
 
